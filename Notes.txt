@@ -8,7 +8,7 @@ Multi plateform
 Permet de deployer une infrasstrure virtualisée
 permet de provisionner infra sur vitualbox,vmware, hyper-v, docker, 
 
-Mettre en place des infrastructure, stable, reproductible
+Mettre en place des infrastructure, stable, reproductible rapidement
 Produire des environnements iso prod
 
 en cas de perte d'un environnement, on peut le rprovisionner rapidement
