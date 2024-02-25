@@ -5,10 +5,14 @@ CPU=2
 IP="10.0.0.10"
 
 Vagrant.configure("2") do |config|
+
   config.vm.box = "orpheadya/nginx"
+  
   config.vm.box_version = "1.0"
   config.vm.network "private_network", ip: IP
+  #montage
   config.vm.synced_folder "website/", "/usr/share/nginx/html/"
+  
   config.vm.provider "virtualbox" do |v|
     v.memory = RAM
     v.cpus = CPU

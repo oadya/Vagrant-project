@@ -1,0 +1,14 @@
+Multi Machines
+--------------
+
+commnt mettre en place plusieurs vm dans un vagrantfile
+Infra avec plusieurs serveurs
+Architectures Distribuées
+Tester un desaster recovery, tester la résilience
+
+vagrant ssh lb
+ip a
+
+vagrant ssh web1
+
+vagrant destroy -f

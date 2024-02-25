@@ -1,0 +1,13 @@
+creation du vagrantfile
+
+vagrant init geerlingguy/centos7 -m
+
+
+vagrant validate
+vagrant up
+vagrant ssh 
+sudo yum install nginx -y
+sudo systemctl start nginx 
+sudo systemctl statusnginx 
+curl 127.0.0.1
+vagrant destroy -f

@@ -1,0 +1,19 @@
+
+Exécution des scripts apres la creation des VM
+
+suite a la creation de la vm, vagrant appel les provisioners (ansible, puppet, chef,) pour lancer des action dans la vm 
+
+cas d'usages:
+installation des appplications
+post config
+update system d'exploitation
+
+
+
+A quel moment est lancé le provisionning ?
+vagrant up
+vagrant up --provision (imposer le provisionning)
+vagrant provision
+vagrant reload --provision
+
+

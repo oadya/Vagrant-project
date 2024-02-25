@@ -1,0 +1,11 @@
+
+Partage des fichiers entre hote et VM par montage ou copie
+
+montage:
+-basic syncing
+-nfs
+-rsync
+
+config.vm.synced_folder "website/", "/usr/share/nginx/html/"
+
+les modifications website/ seront automatiquement montées dans la vm

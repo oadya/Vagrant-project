@@ -1,0 +1,55 @@
+
+Vagrant
+------
+Crée en 2010
+Ecris en ruby
+Hashcorp
+Multi plateform
+Permet de deployer une infrasstrure virtualisée
+permet de provisionner infra sur vitualbox,vmware, hyper-v, docker, 
+
+Mettre en place des infrastructure, stable, reproductible
+Produire des environnements iso prod
+
+en cas de perte d'un environnement, on peut le rprovisionner rapidement
+
+
+Installation
+------------
+https://developer.hashicorp.com/vagrant/install?product_intent=vagrant
+
+
+Commandes
+---------
+vagrant list-commands -> liste des commandes disponibles 
+vagrant list-commands --help 
+
+
+Vue globale de l'infra
+-----------------------
+vagrant global-status -> voir le statut des ressources déployées
+vagrant status -> statut des déploiements du repertoire courant
+vagrant status -h
+
+workflow
+--------
+vagrant up
+vagrant ssh
+vagrant provision -> recinfugurer la vm
+vagrant destroy -> supprimer l'environnement
+vagrant halt -> arret de la vm
+vagrant suspend -> mise en pause
+
+
+
+
+
+
+
+
+
+
+
+
+
+

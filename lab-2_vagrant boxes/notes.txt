@@ -1,0 +1,70 @@
+Vagrant Boxes
+--------------
+images contenant un systeme exploitation presente dans vagrant cloud
+
+Contenu:
+
+Box file(iso à utiliser : tar, zip), 
+Box catalog metadata, 
+Box information(auteur, entreprise, email)
+
+intallation Vagrant Boxes
+-------------------------
+vagrant box add --name ubuntu <url>
+vagrant box add ubuntu/trusty64
+vagrant box add ubuntu/trusty64 --box-version=20190419.0.1
+
+Vagrant cloud : herberger des boxes
+
+
+vreation VM avec nginx
+----------------------
+
+vagrant init ubuntu/trusty64 --box-version=20190425.0.0
+
+vagrant up
+
+vagrant ssh 
+
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo service nginx start
+sudo service nginx status
+curl 127.0.0.1
+
+
+publication de vagrant box
+--------------------------
+# creation de la vbox a partir de la vm
+vagrant package --output nginx.box 
+
+upload de la vbox et réalisez la release dans vagrant cloud pour qu'elle puisse etre utilisée
+
+# utilisation de la vbox
+vagrant init orpheadya/nginx --box-version 1.0
+vagrant up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

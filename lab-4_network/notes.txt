@@ -1,0 +1,28 @@
+Reseaux:
+
+-port forwarding : mapping de port entre hote et vm, pas d'accès direct au hote, vm n'est pas exposé
+-private network: réseau visible que dans la machine locale et psa l'exterieur
+-public network: vm est vu depuis l'exterieur avec une ip du LAN
+
+
+Lab4 - Networking @ ip prvivée 10.0.0.10
+-------------------------------------
+
+vagrant init geerlingguy/centos7 -m
+
+
+vagrant validate
+vagrant up
+ssh vagrant@10.0.0.10
+[vagrant@localhost ~]$
+
+
+
+sudo yum install nginx -y
+sudo systemctl start nginx 
+sudo systemctl status nginx 
+
+ici on un accès direct à la vm depuis le host
+curl 10.0.0.10
+
+vagrant destroy -f

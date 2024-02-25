@@ -1,0 +1,10 @@
+
+vagrant plugin -h
+
+le  plugin vagrant-hostsupdater nous permets d'ecrire dans le fichier /etc/host
+
+https://github.com/agiledivider/vagrant-hostsupdater/tree/master
+
+vagrant plugin install vagrant-hostsupdater
+
+vagrant ssh lb

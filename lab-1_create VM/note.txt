@@ -1,0 +1,17 @@
+vagrant init ubuntu/trusty64 -> initialisation vagrant avec l'image iso ubuntu/trusty64 et du fichier vagrantfile
+vagrant init ubuntu/trusty64 --box-version=20190425.0.0
+
+
+vagrant up -> provisionner/création de la machine
+
+un user vagrant est créé par défaut avec paire de clées ssh
+
+connxion ssh ->  connexion ssh
+
+vagrant status -> voir le statut des ressources par rapport au reppertoire du vagrantfile
+
+vagrant ssh -> connexion ssh
+
+vagrant halt -> arrêt de la vm
+
+vagrant destroy >suppression de la vm

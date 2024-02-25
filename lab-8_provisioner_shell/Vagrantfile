@@ -10,13 +10,14 @@ Vagrant.configure("2") do |config|
     v.cpus = CPU
   end
 
-  # configure lb
+  # configure lb, vm qui joue le role de proxy lb
   config.vm.define "lb" do |lb|
     lb.vm.box = "ubuntu/xenial64"
 	lb.vm.hostname = "lb"
 	lb.vm.network "private_network", ip: "10.0.0.10"
+	# provisioner shell
 	lb.vm.provision "shell" do |s|
-      s.path = "lb.sh"
+      s.path = "https://raw.githubusercontent.com/PacktPublishing/Hands-On-DevOps-with-Vagrant/master/Chapter07/lb.sh"
     end
   end
   
@@ -25,8 +26,9 @@ Vagrant.configure("2") do |config|
     web1.vm.box = "ubuntu/xenial64"
 	web1.vm.hostname = "web1"
 	web1.vm.network "private_network", ip: "10.0.0.11"
+	# provisioner shell
 	web1.vm.provision "shell" do |s|
-      s.path = "web1.sh"
+      s.path = "https://raw.githubusercontent.com/PacktPublishing/Hands-On-DevOps-with-Vagrant/master/Chapter07/web.sh"
       s.args   = "1"
     end
   end
@@ -36,8 +38,9 @@ Vagrant.configure("2") do |config|
     web2.vm.box = "ubuntu/xenial64"
 	web2.vm.hostname = "web2"
 	web2.vm.network "private_network", ip: "10.0.0.12"
+	# provisioner shell
 	web2.vm.provision "shell" do |s|
-      s.path = "web2.sh"
+      s.path = "https://raw.githubusercontent.com/PacktPublishing/Hands-On-DevOps-with-Vagrant/master/Chapter07/web.sh"
       s.args   = "2"
     end
   end
